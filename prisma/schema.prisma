@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  email String @unique 
+  password String
+  name String?
+  image String?
+  imageURL String?
+}
+
+model Pokemon {
+  id Int @id @default(autoincrement())
+  national_dex_number Int @unique
+  name String @unique 
+  type String[] 
+  height String 
+  weight String 
+  ability String[] 
+  ev_yield_quantity Int[]
+  ev_yield_type String[]
+  catch_rate Int? 
+  growth_rate String? 
+  egg_groups String[]
+  base_stats Json
+  lvl_up_moves String[] 
+  tm_moves String[] 
+  egg_moves String[] 
+  tr_moves String[] 
+  move_tutor_moves String[] 
+  image String?
+  evolution Json?
+}
