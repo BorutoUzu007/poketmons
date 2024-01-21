@@ -2,7 +2,7 @@ const {PrismaClient} = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
-async function main() {
+export async function main() {
 
     const datas = [{
             national_dex_number: 1,
@@ -36315,6 +36315,7 @@ async function main() {
         data: datas,
         skipDuplicates: true,
     });
+    return createMany
 }
 
 main().catch((e) => {
