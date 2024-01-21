@@ -64,9 +64,9 @@ export default function LoginForm() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-      <Button onClick={() => handleLogin("google")} className = "mt-10 bg-[#FAF0E6] rounded-md hover:bg-[#FFFFFF] text-black font-bold pl-5 pr-5 text-2xl">Sign In With Google</Button>
+      <Button onClick={() => handleLogin("google")} className = "mt-10 bg-[#FAF0E6] rounded hover:bg-[#FFFFFF] text-black font-bold px-10 mx-3 text-2xl">Sign In With Google</Button>
       <hr className="mt-10" />
-      <Button onClick={() => loginType == 'custom' ? setLoginType('') : setLoginType('custom')} className = "mt-10 mb-3 bg-[#FAF0E6] rounded-md hover:bg-[#FFFFFF] text-black font-bold pl-5 pr-5 text-2xl">Sign In With Credentials</Button>
+      <Button onClick={() => loginType == 'custom' ? setLoginType('') : setLoginType('custom')} className = "mt-10 mb-3 mx-3 bg-[#FAF0E6] rounded hover:bg-[#FFFFFF] text-black font-bold pl-5 pr-5 text-2xl">Sign In With Credentials</Button>
       
       {loginType === "custom" && (
         <div className="mt-5">

@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { getUserData } from "@/db/accessor/user_accessor";
-import { NextApiRequest } from "next";
 
 export async function POST(req: Request) {
     const email : string = await req.json();

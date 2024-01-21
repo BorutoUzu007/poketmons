@@ -41,3 +41,17 @@ model Pokemon {
   image String?
   evolution Json?
 }
+
+model SinglePlayerRooms {
+  id Int @id @default(autoincrement())
+  roomID String @unique 
+  max_players Int 
+  room_mode_type String 
+  current_players Int 
+  playerIDs String[]
+  closed Boolean? @default(false)
+  created_at DateTime? @default(now())
+  closed_date DateTime? 
+  correct_answered Int? 
+  score Int?
+}
