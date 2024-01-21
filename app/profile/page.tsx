@@ -6,7 +6,7 @@ import { SinglePlayerHistory, columns } from './HistoryTable'
 import { headers } from 'next/headers'
 
 async function getHistory(): Promise<SinglePlayerHistory[]> {
-  const response = await fetch(`http://localhost:3000/api/db/get-match-history?offset=0`, {
+  const response = await fetch(`${process.env.ENV}/api/db/get-match-history?offset=0`, {
     method: 'GET',
     headers: headers(),
   });

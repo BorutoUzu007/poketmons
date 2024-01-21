@@ -40,7 +40,7 @@ const Game: FC<{GameData: GameData, roomid: string}> = ({GameData, roomid}: {Gam
 
     const postScore = async () => {
       try {
-            const data = await fetch('http://localhost:3000/api/db/set-score', {
+            const data = await fetch(`${process.env.ENV}/api/db/set-score`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

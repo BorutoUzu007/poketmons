@@ -17,7 +17,7 @@ export interface GameData {
 //   }
 export default async function GameInitialise({roomid}: {roomid: string}) {
     
-    const game_data: GameData = await fetch("http://localhost:3000/api/db/guess-the-pokemon", {cache: 'no-store'}).then((game) => game.json())
+    const game_data: GameData = await fetch(`${process.env.ENV}/api/db/guess-the-pokemon`, {cache: 'no-store'}).then((game) => game.json())
 
     return (
         //@ts-ignore

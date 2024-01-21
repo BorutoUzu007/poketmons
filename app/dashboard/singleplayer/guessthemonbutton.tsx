@@ -33,8 +33,7 @@ export default function GuessTheMonButton() {
        
        
         if (data.status == 200) {
-            console.log("umm hi 2")
-            router.push(`http://localhost:3000/dashboard/singleplayer/${roomID}`)
+            router.push(`${process.env.ENV}/dashboard/singleplayer/${roomID}`)
             router.refresh();
         }
         else {
