@@ -33,7 +33,7 @@ export default function GuessTheMonButton() {
        
        
         if (data.status == 200) {
-            router.push(`${process.env.ENV}/dashboard/singleplayer/${roomID}`)
+            router.push(`/dashboard/singleplayer/${roomID}`)
             router.refresh();
         }
         else {
