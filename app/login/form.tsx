@@ -1,7 +1,7 @@
 'use client';
 
 import { getSession, signIn } from "next-auth/react";
-import { Input } from "@/components/ui/Input";
+import { Input } from "@/components/ui/input";
 import {
   Card,
   CardContent,
@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-import {Label} from "@/components/ui/Label";
+import {Label} from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useEffect } from "react";

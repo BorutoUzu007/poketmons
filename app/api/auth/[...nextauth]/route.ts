@@ -33,6 +33,7 @@ const handler = NextAuth({
         email: {},
         password: {}
       },
+      //@ts-ignore
       async authorize(credentials, req) {
         // You need to provide your own logic here that takes the credentials
         // submitted and returns either a object representing a user or value

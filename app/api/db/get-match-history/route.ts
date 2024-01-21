@@ -2,7 +2,7 @@ import { getMatchHistory } from '@/db/accessor/profile/profile_accessor'
 import { getServerSession } from 'next-auth'
 import { NextResponse } from 'next/server'
 
-export async function GET(req: Response) {
+export async function GET(req: Request) {
     const pageURL = new URL(req.url)
     const session = await getServerSession()
     const offset: number = parseInt(pageURL.searchParams.get('offset') || "0", 10)
